@@ -1,19 +1,26 @@
 # capacitor-plugin-sync-version
-The idea is from the another project capacitor-sync-version
+The idea is from the another project [capacitor-sync-version](https://github.com/arzyu/capacitor-sync-version)
 
 ![npm package version](https://img.shields.io/npm/v/capacitor-sync-version?style=flat-square) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green?style=flat-square)
 
 Syncing version from package.json to target platform in the capacitor projects.
 
-The versionName/version and versionCode/build are configured separately for Android and iOS, because this sync is not 1 to 1 possible without assumtions.
+The versionName/version and versionCode/build are configured separately in package.json for Android and iOS, because this sync is not 1 to 1 possible without assumtions.
 
-| Android native | versionName |versionCode |
-| package.json configuration | androidVersionName | androidVersionCode |
+| Android native | package.json     |
+|    :----:   |          ---: |
+| versionName | androidVersionName  |
+| versionCode | androidVersionCode  |
 
-|iOS native | version | build|
-|package.json configuration| iOSVersion | iOSBuild |
 
-The androidVersionCode and iOSBuild should increase 1 each time
+| iOS native | package.json     |
+|    :----:   |          ---: |
+| version | iOSVersion  |
+| build | iOSBuild  |
+
+
+
+The androidVersionCode and iOSBuild should be integer and increase each time
 
 Currently supported platforms are: `[android, ios]`.
 
