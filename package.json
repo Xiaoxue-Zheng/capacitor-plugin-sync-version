@@ -1,0 +1,42 @@
+{
+  "name": "capacitor-plugin-sync-version",
+  "version": "1.0.0",
+  "description": "Syncing version from package.json to target platform in the capacitor projects.",
+  "bin": {
+    "capacitor-plugin-sync-version": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist # rm -rf dist",
+    "build": "tsc",
+    "postbuild": "chmod +x dist/index.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "chalk": "^4.1.1",
+    "commander": "^8.0.0",
+    "load-json-file": "^6.2.0",
+    "plist": "^3.0.4",
+    "properties-reader": "^2.2.0",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "14",
+    "@types/plist": "^3.0.2",
+    "@types/properties-reader": "^2.1.1",
+    "@types/semver": "^7.3.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xiaoxue-Zheng/capacitor-plugin-sync-version"
+  },
+  "license": "MIT"
+}
