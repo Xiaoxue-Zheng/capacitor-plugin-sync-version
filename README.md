@@ -5,7 +5,18 @@ The idea is from the another project [capacitor-sync-version](https://github.com
 
 Syncing version from package.json to target platform in the capacitor projects.
 
-The versionName/version and versionCode/build are configured separately in package.json for Android and iOS, because this sync is not 1 to 1 possible without assumtions.
+The version are configured separately in package.json for Android and iOS, because this sync is not 1 to 1 possible without assumtions.
+
+```
+{
+  "name": "Your App",
+  ...
+  "androidVersionName": "1.0.0",
+  "androidVersionCode": "2",
+  "iOSVersion": "1.1.0",
+  "iOSBuild": "2",
+}
+```
 
 | Android native | package.json     |
 |    :----:   |          ---: |
